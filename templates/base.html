@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="zh-CN" class=" no-touch">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Infernoid's Infinity</title>
+	<link rel="stylesheet" id="toc-screen-css" href="{% static 'blog/wp-content/css/screen.min.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="xmag-fonts-css" href="{% static 'blog/wp-content/css/google_font.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="xmag-icons-css" href="{% static 'blog/wp-content/css/simple-line-icons.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="xmag-style-css" href="{% static 'blog/wp-content/css/style.min.css' %}" type="text/css" media="all">
+	<style id="xmag-style-inline-css" type="text/css">
+		.main-navbar {
+			background-color: #fff;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+			-webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.03);
+			box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.03);
+		}
+
+		.main-menu>li>a,
+		.main-navigation .home-link a {
+			color: #333;
+			border-left: 1px solid #f2f2f2;
+		}
+
+		.main-menu>li:last-child>a {
+			border-right: 1px solid #f2f2f2;
+		}
+
+		.main-menu>li>a:hover,
+		.main-navigation .home-link a:hover {
+			background-color: #fff;
+			color: ;
+		}
+
+		.main-navigation .home-link a:hover:before,
+		.main-menu>li:hover:before,
+		.main-menu>li:active:before,
+		.main-menu>li.current_page_item:before,
+		.main-menu>li.current-menu-item:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 2px;
+			z-index: 2;
+			background-color: ;
+		}
+
+		.main-menu ul {
+			background-color: #fff;
+			border: 1px solid #eee;
+		}
+
+		.main-menu ul a {
+			border-top: 1px solid #f2f2f2;
+			color: #555;
+		}
+
+		.main-menu ul a:hover {
+			color: ;
+		}
+
+		#mobile-header {
+			background-color: #fff;
+			border-bottom: 1px solid #eee;
+			-webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.03);
+			box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.03);
+		}
+
+		#mobile-header .mobile-title,
+		#mobile-header .mobile-menu-toggle {
+			color: #333;
+		}
+
+		.button-toggle,
+		.button-toggle:before,
+		.button-toggle:after {
+			background-color: #333;
+		}
+
+		span.highlighted {
+            color: red;
+        }
+	</style>
+	<!-- <script type="text/javascript" src="http://blog.codingplayboy.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script> -->
+	<script type="text/javascript" src="http://blog.codingplayboy.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+	<link rel="icon" href="{% static 'blog/img/icon.jpg' %}" sizes="32x32">
+	<!-- <link rel="icon" href="http://blog.codingplayboy.com/wp-content/uploads/2016/06/cropped-profile-192x192.jpg" sizes="192x192"> -->
+	<!-- <link rel="apple-touch-icon-precomposed" href="http://blog.codingplayboy.com/wp-content/uploads/2016/06/cropped-profile-180x180.jpg"> -->
+	<!-- <meta name="msapplication-TileImage" content="http://blog.codingplayboy.com/wp-content/uploads/2016/06/cropped-profile-270x270.jpg"> -->
+</head>
+
+<body class="home blog site-fullwidth layout2">
+
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+
+			<div class="header-top collapse">
+				<div class="container">
+					<div class="row">
+						<div class="col-4">
+							<div class="site-branding">
+								<h1 class="site-title"><a href="" rel="home">Infernoid's Infinity</a></h1>
+							</div><!-- .site-branding -->
+						</div>
+						<div class="col-8">
+							<div class="header-navigation">
+
+								<div class="search-top">
+									<form role="search" method="get" class="search-form" action="{% url 'haystack_search' %}">
+										<label>
+											<span class="screen-reader-text">Search for:</span>
+											<input type="search" class="search-field" placeholder="Search …" value="" name="q">
+										</label>
+										<button type="submit" class="search-submit">
+											<span class="sli icon-magnifier"></span>
+											<span class="screen-reader-text">Search</span>
+										</button>
+									</form>
+                                </div>
+                                
+								<!-- Search Form -->
+								<nav id="top-navigation" class="top-navigation" role="navigation">
+									<ul id="menu-%e9%a1%b5%e9%9d%a2" class="top-menu">
+										<!-- <li id="menu-item-694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-694">
+                                            <a href="#">技术</a>
+                                        </li>
+										<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651">
+                                            <a href="#">读书</a>
+                                        </li> -->
+									</ul>
+                                </nav><!-- #top-navigation -->
+                                
+							</div>
+						</div>
+					</div><!-- .row -->
+				</div>
+			</div><!-- Header Top -->
+
+
+			<nav id="main-navbar" class="main-navbar">
+				<div class="container">
+					<div id="main-navigation" class="main-navigation">
+						<div class="home-link">
+							<a href="/" title="HOME" rel="home"><span class="icon-home"></span></a>
+						</div>
+
+						<ul id="menu-%e5%af%bc%e8%88%aa" class="main-menu">
+							<li id="menu-item-615" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-615">
+								<a href="">DATABASE</a>
+								<ul class="sub-menu">
+									<li id="menu-item-605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-605">
+                                        <a href="{% url 'blog:category' 1 %}">MySQL</a>
+                                    </li>
+                                    <li id="menu-item-605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-605">
+                                        <a href="{% url 'blog:category' 2 %}">SQL Server</a>
+                                    </li>
+                                    <li id="menu-item-605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-605">
+                                        <a href="{% url 'blog:category' 3 %}">Oracle</a>
+                                    </li>
+                                    <li id="menu-item-605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-605">
+                                        <a href="{% url 'blog:category' 4 %}">PostgreSQL</a>
+                                    </li>
+								</ul>
+							</li>
+							<li id="menu-item-603" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-603">
+								<a href="">PYTHON</a>
+								<ul class="sub-menu">
+									<li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 5 %}">Django</a>
+                                    </li>
+                                    <li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 6 %}">Flask</a>
+                                    </li>
+                                    <li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 7 %}">Superset</a>
+                                    </li>
+                                    <li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 8 %}">crawler</a>
+                                    </li>
+                                    <li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 9 %}">Tkinter</a>
+                                    </li>
+								</ul>
+							</li>
+							<li id="menu-item-602" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-602">
+                                <a href="">JAVA</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-607" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607">
+                                        <a href="{% url 'blog:category' 10 %}">Spring Boot</a>
+                                    </li>
+								</ul>
+                            </li>
+							<li id="menu-item-613" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-613">
+								<a href="">JAVASCRIPT</a>
+								<ul class="sub-menu">
+									<li id="menu-item-872" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-872">
+                                        <a href="{% url 'blog:category' 11 %}">Vue</a>
+                                    </li>
+								</ul>
+							</li>
+							<li id="menu-item-616" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-616">
+								<a href="">MORE</a>
+								<ul class="sub-menu">
+									<li id="menu-item-609" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-609">
+                                        <a href="{% url 'blog:category' 12 %}">Airflow</a>
+                                    </li>
+									<li id="menu-item-786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-786">
+                                        <a href="{% url 'blog:category' 13 %}">kettle</a>
+                                    </li>
+                                    <li id="menu-item-786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-786">
+                                        <a href="{% url 'blog:category' 14 %}">SSIS</a>
+                                    </li>
+									<li id="menu-item-611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-611">
+                                        <a href="{% url 'blog:category' 15 %}">Shell</a>
+									</li>
+									<li id="menu-item-611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-611">
+										<a href="{% url 'blog:category' 16 %}">Others</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav><!-- Main Navbar -->
+
+        </header><!-- #masthead -->
+        
+        <div id="content" class="site-content">
+            <div class="container">
+
+                {% block main %}
+                {% endblock main %}
+
+				{% block side %}
+				{% endblock side %}
+
+            </div><!-- .container -->
+        </div><!-- #content -->
+
+        <footer id="colophon" class="site-footer" role="contentinfo">
+
+            <div class="footer widget-area" role="complementary">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4" id="footer-area-left">
+                        </div>
+                        <div class="col-4" id="footer-area-center">
+                        </div>
+                        <div class="col-4" id="footer-area-right">
+                        </div>
+                    </div><!-- .row -->
+                </div>
+            </div>
+
+            <div class="footer-copy">
+                <div class="container">
+                    <div class="row">
+						<div class="col-4"></div>
+                        <div class="col-4">
+                            <div class="site-info">© 2019 
+								<span class="sep">/
+								<span class="sep">Infernoid's Infinity
+								<span class="sep">/
+								<span class="sep" href="www.beian.miit.gov.cn">粤ICP备19031989号
+							</div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div><!-- .row -->
+                </div>
+            </div>
+
+        </footer><!-- #colophon -->
+
+        <a href="#" id="scroll-up" style="display: none;"><span class="icon-arrow-up"></span></a>
+    </div><!-- #page -->
+
+</body>
+
+</html>

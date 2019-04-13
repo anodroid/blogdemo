@@ -1,0 +1,12 @@
+Django==2.1.7
+django-ckeditor==5.6.1
+django-haystack==2.8.1
+django-js-asset==1.2.2
+django-markdown==0.8.4
+django-mdeditor==0.1.13
+django-suit==0.2.26
+jieba==0.39
+Markdown==3.1
+PyMySQL==0.9.3
+pytz==2018.9
+Whoosh==2.7.4
